@@ -1,4 +1,4 @@
 # AlgorithmRTC
 
-AlgorithmRTC is a simple Java application to measure the running time of a given algorithm.
-It is designed and developed for one of the classes i took during my master's programme.
+AlgorithmRTC (RTC stands for Running Time Calculator) is a simple Java application to measure the running time of a given algorithm.
+It was designed and developed within the scope of assignments for a class I took in my graduate program.
