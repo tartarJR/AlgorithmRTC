@@ -2,49 +2,54 @@ package com.tatar.algorithmrtc.algorithm.sortingalgorithm;
 
 public class MergeSort extends SortingAlgorithm {
 
-    private int[] array;
-    private int[] tempMergeArray;
 
     @Override
     public void perform(int[] inputArr) {
-        this.array = inputArr;
-        this.tempMergeArray = new int[inputArr.length];
-        divide(0, inputArr.length - 1);
+        divideAndConquer(inputArr);
     }
 
-    private void divide(int left, int right) {
-        if (left < right) {
-            int middle = left + (right - left) / 2;
-
-            divide(left, middle);
-            divide(middle + 1, right);
-            merge(left, middle, right);
+    private void divideAndConquer(int[] inputArray) {
+        int n = inputArray.length;
+        if (n == 1) {
+            return;
         }
+        int mid = n / 2;
+        int[] leftArray = new int[mid];
+        int[] rightArray = new int[n - mid];
+        System.arraycopy(inputArray, 0, leftArray, 0, leftArray.length);
+        System.arraycopy(inputArray, leftArray.length, rightArray, 0, rightArray.length);
+        divideAndConquer(leftArray);
+        divideAndConquer(rightArray);
+        merge(leftArray, rightArray, inputArray);
     }
 
-    private void merge(int left, int middle, int right) {
-        System.arraycopy(array, left, tempMergeArray, left, right + 1 - left);
-
-        int i = left;
-        int j = middle + 1;
-        int k = left;
-
-        while (i <= middle && j <= right) {
-            if (tempMergeArray[i] <= tempMergeArray[j]) {
-                array[k] = tempMergeArray[i];
+    private void merge(int[] leftArray, int[] rightArray, int[] sortedArray) {
+        int leftArrayLength = leftArray.length;
+        int rightArrayLength = rightArray.length;
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        while (i < leftArrayLength && j < rightArrayLength) {
+            if (leftArray[i] < rightArray[j]) {
+                sortedArray[k] = leftArray[i];
                 i++;
             } else {
-                array[k] = tempMergeArray[j];
+                sortedArray[k] = rightArray[j];
                 j++;
             }
-
             k++;
         }
-
-        while (i <= middle) {
-            array[k] = tempMergeArray[i];
-            k++;
+        //copy the rest of the first half if there is anything left
+        while (i < leftArrayLength) {
+            sortedArray[k] = leftArray[i];
             i++;
+            k++;
+        }
+        //copy the rest of the second half if there is anything left
+        while (j < rightArrayLength) {
+            sortedArray[k] = rightArray[j];
+            j++;
+            k++;
         }
     }
 }
