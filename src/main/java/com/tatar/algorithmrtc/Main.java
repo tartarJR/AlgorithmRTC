@@ -1,9 +1,8 @@
 package com.tatar.algorithmrtc;
 
-import com.tatar.algorithmrtc.algorithm.Algorithm;
-import com.tatar.algorithmrtc.algorithm.sortingalgorithm.InsertionSort;
-import com.tatar.algorithmrtc.algorithm.sortingalgorithm.MergeSort;
-import com.tatar.algorithmrtc.algorithm.sortingalgorithm.SortingAlgorithm;
+import com.tatar.algorithmrtc.sortingalgorithm.InsertionSort;
+import com.tatar.algorithmrtc.sortingalgorithm.MergeSort;
+import com.tatar.algorithmrtc.sortingalgorithm.SortingAlgorithm;
 import com.tatar.algorithmrtc.inputhelper.InputGenerator;
 import com.tatar.algorithmrtc.inputhelper.RandomGenerator;
 import com.tatar.algorithmrtc.rtc.RunTimeCalculator;

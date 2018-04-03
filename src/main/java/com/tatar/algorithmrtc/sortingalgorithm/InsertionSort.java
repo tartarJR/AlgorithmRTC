@@ -1,4 +1,4 @@
-package com.tatar.algorithmrtc.algorithm.sortingalgorithm;
+package com.tatar.algorithmrtc.sortingalgorithm;
 
 public class InsertionSort extends SortingAlgorithm {
     @Override

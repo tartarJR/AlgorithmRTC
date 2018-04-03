@@ -1,6 +1,6 @@
 package com.tatar.algorithmrtc.rtc;
 
-import com.tatar.algorithmrtc.algorithm.sortingalgorithm.SortingAlgorithm;
+import com.tatar.algorithmrtc.sortingalgorithm.SortingAlgorithm;
 
 public class RunTimeCalculator {
 
