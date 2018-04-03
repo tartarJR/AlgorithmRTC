@@ -1,9 +1,6 @@
 package com.tatar.algorithmrtc.rtc;
 
-import com.tatar.algorithmrtc.algorithm.Algorithm;
 import com.tatar.algorithmrtc.algorithm.sortingalgorithm.SortingAlgorithm;
-
-import java.util.concurrent.TimeUnit;
 
 public class RunTimeCalculator {
 
