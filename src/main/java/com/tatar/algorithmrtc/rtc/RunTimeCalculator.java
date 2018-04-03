@@ -5,11 +5,14 @@ import com.tatar.algorithmrtc.algorithm.Algorithm;
 import java.util.concurrent.TimeUnit;
 
 public class RunTimeCalculator {
-    public long calculate(Algorithm algorithm, int[] inputArray) {
-        long lStartTime = System.nanoTime();
-        algorithm.perform(inputArray);
-        long lEndTime = System.nanoTime();
 
-        return lEndTime - lStartTime;
+    public double getRunningTimeInSeconds(Algorithm algorithm, int[] inputArray) {
+        long startTime = System.nanoTime();
+        algorithm.perform(inputArray);
+        long endTime = System.nanoTime();
+
+        long elapsedTime = endTime - startTime;
+
+        return (double)elapsedTime / 1000000000.0;
     }
 }

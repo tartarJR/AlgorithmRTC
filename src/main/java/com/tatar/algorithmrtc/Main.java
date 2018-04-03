@@ -22,9 +22,11 @@ public class Main {
         Algorithm mergeSort = new MergeSort();
         Algorithm insertionSort = new InsertionSort();
 
-        //System.out.println("Elapsed time in nanoseconds for MERGE SORT: " + runTimeCalculator.calculate(mergeSort, inputArr));
-        System.out.println("Elapsed time in nanoseconds for INSERTION SORT: " + runTimeCalculator.calculate(insertionSort, inputArr));
+        //System.out.println("Running time for MERGE SORT is " + runTimeCalculator.getRunningTimeInSeconds(mergeSort, inputArr) + " seconds.");
+        System.out.println("Running time for INSERTION SORT is " + runTimeCalculator.getRunningTimeInSeconds(insertionSort, inputArr) + " seconds.");
     }
 }
-//1247454033 merge
-//1565207
+// 10000000                 1.720142459
+// 300000   10.881722244    0.047389845
+// 500000   27.927323336    0.079521302
+// 1000000  111.343392966   0.150275374
