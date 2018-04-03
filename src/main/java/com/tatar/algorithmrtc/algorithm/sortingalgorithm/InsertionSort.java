@@ -2,7 +2,7 @@ package com.tatar.algorithmrtc.algorithm.sortingalgorithm;
 
 public class InsertionSort extends SortingAlgorithm {
     @Override
-    public void perform(int[] inputArr) {
+    public void sort(int[] inputArr) {
         int n = inputArr.length;
         for (int j = 1; j < n; j++) {
             int key = inputArr[j];

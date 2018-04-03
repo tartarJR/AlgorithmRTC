@@ -3,6 +3,7 @@ package com.tatar.algorithmrtc;
 import com.tatar.algorithmrtc.algorithm.Algorithm;
 import com.tatar.algorithmrtc.algorithm.sortingalgorithm.InsertionSort;
 import com.tatar.algorithmrtc.algorithm.sortingalgorithm.MergeSort;
+import com.tatar.algorithmrtc.algorithm.sortingalgorithm.SortingAlgorithm;
 import com.tatar.algorithmrtc.inputhelper.InputGenerator;
 import com.tatar.algorithmrtc.inputhelper.RandomGenerator;
 import com.tatar.algorithmrtc.rtc.RunTimeCalculator;
@@ -15,12 +16,12 @@ public class Main {
         RandomGenerator randomGenerator = new RandomGenerator(random);
         InputGenerator inputGenerator = new InputGenerator(randomGenerator);
 
-        int[] inputArr = inputGenerator.getRandomIntegerArray(10000000, 1000, 0);
+        int[] inputArr = inputGenerator.getRandomIntegerArray(10, 1000, 0);
 
         RunTimeCalculator runTimeCalculator = new RunTimeCalculator();
 
-        Algorithm mergeSort = new MergeSort();
-        Algorithm insertionSort = new InsertionSort();
+        SortingAlgorithm mergeSort = new MergeSort();
+        SortingAlgorithm insertionSort = new InsertionSort();
 
         //System.out.println("Running time for MERGE SORT is " + runTimeCalculator.getRunningTimeInSeconds(mergeSort, inputArr) + " seconds.");
         System.out.println("Running time for INSERTION SORT is " + runTimeCalculator.getRunningTimeInSeconds(insertionSort, inputArr) + " seconds.");

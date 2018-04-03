@@ -4,7 +4,7 @@ public class MergeSort extends SortingAlgorithm {
 
 
     @Override
-    public void perform(int[] inputArr) {
+    public void sort(int[] inputArr) {
         divideAndConquer(inputArr);
     }
 
