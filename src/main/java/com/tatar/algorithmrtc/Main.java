@@ -4,8 +4,6 @@ import com.tatar.algorithmrtc.di.AppComponent;
 import com.tatar.algorithmrtc.di.DaggerAppComponent;
 import com.tatar.algorithmrtc.inputhelper.InputGenerator;
 import com.tatar.algorithmrtc.rtc.RunTimeCalculator;
-import com.tatar.algorithmrtc.sortingalgorithm.InsertionSort;
-import com.tatar.algorithmrtc.sortingalgorithm.MergeSort;
 import com.tatar.algorithmrtc.sortingalgorithm.SortingAlgorithm;
 
 public class Main {
@@ -15,7 +13,7 @@ public class Main {
         InputGenerator inputGenerator = appComponent.getInputGenerator();
         int[] inputArr = inputGenerator.getRandomIntegerArray(10000, 1000, 0);
 
-        RunTimeCalculator runTimeCalculator = new RunTimeCalculator();
+        RunTimeCalculator runTimeCalculator = appComponent.getRunTimeCalculator();
 
         SortingAlgorithm mergeSort = appComponent.getMergeSortAlgorithm();
         SortingAlgorithm insertionSort = appComponent.getInsertionSortAlgorithm();
