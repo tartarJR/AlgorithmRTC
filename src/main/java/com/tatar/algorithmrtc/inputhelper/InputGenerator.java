@@ -1,9 +1,12 @@
 package com.tatar.algorithmrtc.inputhelper;
 
+import javax.inject.Inject;
+
 public class InputGenerator {
 
     private RandomGenerator randomGenerator;
 
+    @Inject
     public InputGenerator(RandomGenerator randomGenerator) {
         this.randomGenerator = randomGenerator;
     }
